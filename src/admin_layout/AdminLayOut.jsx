@@ -4,11 +4,14 @@ import DashBoard from "./pages/main_pages/DashBoard";
 import AdminNav from "./components/AdminNav";
 import AdminUsers from "./pages/main_pages/AdminUsers";
 import AdminProducts from "./pages/main_pages/AdminProducts";
-import NewProduct from "./pages/sec_pages/NewProduct";
 import AdminSideBar from "./components/AdminSideBar";
 import PageError from "../member_layout/pages/PageError";
 import AddUser from "./pages/sec_pages/AddUser";
 import AdminEditUser from "./pages/sec_pages/AdminEditUser";
+import AdminViewUser from "./pages/sec_pages/AdminViewUser";
+import AddProduct from "./pages/sec_pages/AddProduct";
+import AdminViewProduct from "./pages/sec_pages/AdminViewProduct";
+import AdminEditProduct from "./pages/sec_pages/AdminEditProduct";
 
 const AdminLayOut = ({ products, getProducts, users, getUsers }) => {
   const [isSideOpen, setIsSideOpen] = useState(false);
@@ -45,17 +48,31 @@ const AdminLayOut = ({ products, getProducts, users, getUsers }) => {
           path="/"
           element={<DashBoard users={users} products={products} />}
         />
+
         <Route
           path="/users"
           element={<AdminUsers users={users} getUsers={getUsers} />}
         />
         <Route path="/users/adduser" element={<AddUser users={users} />} />
+        <Route path="/users/:userid" element={<AdminViewUser />} />
         <Route
           path="/users/edituser/:userid"
           element={<AdminEditUser users={users} getUsers={getUsers} />}
         />
-        <Route path="/products" element={<AdminProducts />} />
-        <Route path="/products/newproduct" element={<NewProduct />} />
+
+        <Route
+          path="/products"
+          element={
+            <AdminProducts products={products} getProducts={getProducts} />
+          }
+        />
+        <Route path="/products/addproduct" element={<AddProduct />} />
+        <Route path="/products/:prodid" element={<AdminViewProduct />} />
+        <Route
+          path="/products/editproduct/:prodid"
+          element={<AdminEditProduct />}
+        />
+
         <Route path="*" element={<PageError />} />
       </Routes>
     </div>

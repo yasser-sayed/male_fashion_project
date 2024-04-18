@@ -86,7 +86,7 @@ const AdminEditUser = ({ users, getUsers }) => {
       navigate("/admin/users");
   };
 
-  const signUpFun = () => {
+  const editUser = () => {
     const emailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const phoneNumValid = /^(\+201|01|00201)[0-2,5]{1}[0-9]{8}/;
     const urlVaild =
@@ -495,7 +495,7 @@ const AdminEditUser = ({ users, getUsers }) => {
 
         <div className="flex items-center justify-center">
           <button
-            onClick={signUpFun}
+            onClick={editUser}
             className="self-start inline-block rounded-lg bg-success px-6 py-2   font-bold  leading-normal text-white shadow-[0_4px_9px_-4px_#14a44d] transition duration-150 ease-in-out hover:bg-success-600 hover:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.3),0_4px_18px_0_rgba(20,164,77,0.2)] focus:bg-success-600 focus:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.3),0_4px_18px_0_rgba(20,164,77,0.2)] focus:outline-none focus:ring-0 active:bg-success-700 active:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.3),0_4px_18px_0_rgba(20,164,77,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(20,164,77,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.2),0_4px_18px_0_rgba(20,164,77,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.2),0_4px_18px_0_rgba(20,164,77,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(20,164,77,0.2),0_4px_18px_0_rgba(20,164,77,0.1)]"
           >
             Edit User
