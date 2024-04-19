@@ -8,7 +8,16 @@ const ProdCard = ({ productObj, addItem, delItem }) => {
   return (
     <div className="min-h-72 justify-between group py-5 px-10 w-72 gap-10 text-[#384354] font-bold flex flex-col items-center relative hover:shadow-xl overflow-x-hidden">
       <h1
-        className={`text-${productObj.label.color} bg-${productObj.label.background} absolute px-4 py-1 font-medium start-1/4 top-1`}
+        className={`text-${
+          productObj.label.color == "white" || productObj.label.color == "black"
+            ? productObj.label.color
+            : `${productObj.label.color}-600`
+        } bg-${
+          productObj.label.background == "white" ||
+          productObj.label.background == "black"
+            ? productObj.label.background
+            : `${productObj.label.background}-600`
+        } absolute px-4 py-1 font-medium start-1/4 top-1`}
       >
         {productObj.label.name}
       </h1>
