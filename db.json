@@ -319,7 +319,7 @@
       "city": "cairo",
       "gender": "male",
       "phoneNumber": "01022496430",
-      "role": "member",
+      "role": "admin",
       "image": "https://img.freepik.com/premium-vector/happy-smiling-young-man-avatar-3d-portrait-man-cartoon-character-people-vector-illustration_653240-187.jpg?w=360"
     },
     {
@@ -347,6 +347,19 @@
       "role": "admin",
       "image": "https://img.freepik.com/premium-vector/happy-smiling-young-man-avatar-3d-portrait-man-cartoon-character-people-vector-illustration_653240-187.jpg?w=360",
       "id": "ym8L_DD"
+    },
+    {
+      "firstName": "tamara",
+      "lastName": "akmal",
+      "userName": "tamara-akmal",
+      "email": "tamara@gmail.com",
+      "password": "123456",
+      "city": "cairo",
+      "gender": "female",
+      "phoneNumber": "01124523411",
+      "role": "member",
+      "image": "https://media.istockphoto.com/id/1081125770/vector/face-expression-of-woman-with-blond-hair.jpg?s=612x612&w=0&k=20&c=mN-oV1RNH964Hu8s8Qjie8tOf6Awyf6e-sYUjR_RnOk=",
+      "id": "NQavbZZ"
     }
   ]
 }
